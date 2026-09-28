@@ -1,0 +1,55 @@
+---
+title: "Text-to-Speech Narration in Terminal 1d6 RPG"
+sidebarTitle: "TTS Narration"
+description: "Enable Text-to-Speech in Terminal 1d6 RPG to have the Dungeon Master's messages narrated aloud using your browser's built-in speech synthesis."
+---
+
+Terminal 1d6 RPG includes a built-in text-to-speech (TTS) narration feature that reads every Dungeon Master message aloud using your browser's native speech synthesis API. No plugins, no downloads, and no internet connection required — the voice lives entirely inside your browser, making it available even when you're playing offline.
+
+## Toggling TTS On and Off
+
+You control narration from the top toolbar with a single button:
+
+- Click the **TTS: ON / TTS: OFF** button to toggle narration at any time during your session.
+- When TTS is **ON**, the button is highlighted in **cyan** so you can confirm the setting at a glance.
+- When TTS is **OFF**, the button grays out and narration stops immediately.
+- Your preference is saved automatically alongside your game state — when you reload the page and restore a session, TTS picks up exactly as you left it.
+
+## What Gets Narrated
+
+Every piece of Dungeon Master output is read aloud, including:
+
+- Encounter opening and closing text
+- Dice roll outcome descriptions
+- Calamity and triumph event passages (bad and good event draws)
+- Epilogue text at the end of your run
+
+Your own typed commands and inputs are **not** narrated — only the DM's responses are spoken.
+
+## TTS Speech Settings
+
+The narration uses the following browser-level speech parameters to give the voice a measured, atmospheric quality:
+
+- **Speech rate:** `0.95` — slightly slower than the browser default, giving each word room to land.
+- **Pitch:** `0.9` — slightly lower than default, lending the DM's voice a grounded, authoritative tone.
+
+## Automatic Symbol Stripping
+
+Markdown and formatting symbols are automatically removed from the text before it is sent to the speech engine. Characters including `* # _ [ ] >` are stripped out so they never interrupt the flow of narration or produce awkward spoken artefacts.
+
+## Browser Support
+
+<Note>
+  TTS uses the Web Speech API built into your browser — no external service or internet connection is needed.
+</Note>
+
+| Browser | TTS Support |
+|---------|-------------|
+| Chrome | ✅ Full support |
+| Edge | ✅ Full support |
+| Safari | ✅ Full support |
+| Firefox | ✅ Supported (may vary by OS voice pack) |
+
+<Tip>
+  If TTS cuts off mid-sentence, try switching to Chrome or Edge, which have the most reliable speech synthesis implementations.
+</Tip>

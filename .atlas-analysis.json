@@ -1,0 +1,75 @@
+{
+  "projectType": "saas",
+  "projectName": "Terminal 1d6 RPG",
+  "projectDescription": "A browser-based, offline-capable procedural terminal RPG where a single d6 die resolves every action as you battle through procedurally-drawn dungeons, enemies, and loot.",
+  "theme": "almond",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Player Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Gameplay",
+            "pages": [
+              "gameplay/character-creation",
+              "gameplay/dice-resolution",
+              "gameplay/combat",
+              "gameplay/encounters"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/procedural-tables",
+              "features/tts-narration",
+              "features/save-load",
+              "features/export"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "reference/dice-outcomes",
+              "reference/loot-tables",
+              "reference/enemy-tables",
+              "reference/location-tables",
+              "reference/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "9-question character creation wizard (name, class, era, companion, backstory, weapons, strengths, struggles, notes)",
+    "1d6 dice resolution for every player action — results range from perfect triumph (6) to critical calamity (1)",
+    "Procedural content pools: 25 unique bosses, 25 henchmen, 25 locations, 25 loot items, 25 good/bad event outcomes",
+    "HP tracking with visual badge (10 HP starting, -1 on a roll of 1, death at 0)",
+    "Encounter advancement system — successful rolls trigger location and enemy shifts",
+    "Text-to-Speech (TTS) narration toggle for all Dungeon Master output",
+    "Offline PWA — installs on mobile/desktop, works fully without internet via Service Worker",
+    "LocalStorage auto-save and session restore on reload",
+    "Export game state as JSON or full story chronicle as Markdown"
+  ],
+  "publicApiSurface": [
+    "Character wizard fields: name, class_name, timeline, familiar, bio, weapons, strengths, struggles, notes",
+    "Dice roll outcomes: 6 (Perfect Triumph), 5-4 (Positive Progress), 3-2 (Complication & Strain), 1 (Dire Misfortune / Critical Calamity)",
+    "Procedural tables: bosses, henchmen, locations, loot, bad_things, good_things",
+    "Export JSON: full gameState object including character, logs, tables, HP, combat state",
+    "Export Markdown: formatted chronicle with character sheet header and full action log",
+    "TTS toggle: enables/disables browser SpeechSynthesis narration",
+    "Reset: clears localStorage and reloads a fresh campaign",
+    "LocalStorage key: terminal_1d6_rpg_state"
+  ]
+}

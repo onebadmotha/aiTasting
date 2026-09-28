@@ -1,0 +1,138 @@
+---
+title: "Install Terminal 1d6 RPG as an Offline PWA"
+sidebarTitle: "Installation"
+description: "Install Terminal 1d6 RPG on your mobile device or desktop browser as a Progressive Web App and play fully offline without any app store download."
+---
+
+Terminal 1d6 RPG is built as a Progressive Web App (PWA), which means it runs in your browser like any website but can also be installed directly on your device for a dedicated, app-like experience. Once installed, the game loads from your device's local cache — no internet connection required, no app store visit, no waiting for updates. Your saves live in your browser's localStorage and never leave your device.
+
+<Note>
+  No account is required and no data is ever sent to any server. Your game
+  state, character history, and story chronicle are stored exclusively in your
+  browser's localStorage on your own device.
+</Note>
+
+<Tip>
+  You do not need to install anything to play. If you prefer, open the game URL
+  in any supported browser and play directly in the tab — installation is
+  entirely optional and only needed if you want offline access or a full-screen
+  standalone experience.
+</Tip>
+
+## Install on Your Device
+
+Follow the steps for your platform below. The install prompt appears only after the browser confirms the PWA assets are cached and ready for offline use — this usually happens on your first or second visit.
+
+<Tabs>
+  <Tab title="Chrome / Edge (Desktop)">
+    Chrome and Edge on desktop show an install icon in the browser address bar
+    as soon as the PWA is ready to install.
+
+    <Steps>
+      <Step title="Look for the install icon">
+        Find the **Install** icon (a monitor with a down-arrow, or a plus sign
+        inside a circle) on the right side of the address bar. It appears once
+        the game has loaded and cached its assets.
+      </Step>
+      <Step title="Click Install">
+        Click the icon. A small dialog appears asking you to confirm. Click
+        **Install** (Chrome) or **Install App** (Edge).
+      </Step>
+      <Step title="Alternatively, use the browser menu">
+        If the icon is not visible, open the browser menu (the three-dot **⋮**
+        button in the top-right corner) and look for **Install Terminal 1d6
+        RPG** or **Install App**. Click it and confirm.
+      </Step>
+      <Step title="Launch the standalone app">
+        The game opens in its own window without any browser chrome — no address
+        bar, no tabs. A shortcut is added to your desktop or Start menu. You can
+        launch it offline any time from there.
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Safari (iPhone / iPad)">
+    Safari on iOS and iPadOS uses the Share sheet to add PWAs to your Home
+    Screen.
+
+    <Steps>
+      <Step title="Open the game in Safari">
+        Navigate to the Terminal 1d6 RPG URL in **Safari**. The Add to Home
+        Screen feature is only available in Safari on iOS — it does not appear
+        in Chrome or Firefox on iPhone.
+      </Step>
+      <Step title="Tap the Share button">
+        Tap the **Share** button — the box with an upward arrow — in the Safari
+        toolbar at the bottom of the screen (iPhone) or top of the screen
+        (iPad).
+      </Step>
+      <Step title="Tap Add to Home Screen">
+        Scroll through the Share sheet and tap **Add to Home Screen**. You can
+        edit the name shown under the icon before confirming.
+      </Step>
+      <Step title="Tap Add">
+        Tap **Add** in the top-right corner. The Terminal 1d6 RPG icon appears
+        on your Home Screen immediately.
+      </Step>
+      <Step title="Launch from your Home Screen">
+        Tap the icon to open the game in standalone fullscreen mode. It runs
+        entirely offline after the initial cache is built on your first visit.
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Chrome (Android)">
+    Chrome on Android detects the PWA automatically and offers an install
+    banner or menu option.
+
+    <Steps>
+      <Step title="Open the game in Chrome">
+        Navigate to the Terminal 1d6 RPG URL in **Chrome** on your Android
+        device.
+      </Step>
+      <Step title="Accept the install banner (if shown)">
+        Chrome may display an **Add to Home Screen** banner at the bottom of
+        the screen. Tap **Install** or **Add** to proceed directly.
+      </Step>
+      <Step title="Or use the Chrome menu">
+        If no banner appears, tap the three-dot **⋮** menu in the top-right
+        corner. Tap **Add to Home Screen** or **Install App**, then tap **Add**
+        in the confirmation dialog.
+      </Step>
+      <Step title="Launch from your Home Screen or app drawer">
+        The Terminal 1d6 RPG icon is added to your Home Screen and Android app
+        drawer. Tap it to open the game in standalone mode without a browser
+        address bar. The game runs fully offline after the first load.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## After Installation
+
+Once installed, the game behaves like a native app:
+
+- **Standalone window** — no browser address bar or tab strip clutters the terminal interface.
+- **Fully offline** — the service worker caches all game assets on the first load. You can enable Airplane Mode and the game continues to work without interruption.
+- **Auto-updates** — when you are online and open the app, the service worker silently checks for and downloads any updates in the background. The next time you launch, you are on the latest version automatically.
+- **Same save data** — your localStorage save is shared between the installed PWA and the browser tab. Progress made in one is immediately visible in the other.
+
+<Warning>
+  Clearing your browser's site data or using your browser's "Clear Storage"
+  option will delete your localStorage save. Export your game state as a JSON
+  file regularly if you want a reliable backup, especially before clearing
+  browser data.
+</Warning>
+
+## System Requirements
+
+No special hardware is needed. Terminal 1d6 RPG runs on any device with a modern browser:
+
+| Browser | Minimum Version |
+| ------- | --------------- |
+| Chrome  | 70+             |
+| Firefox | 63+             |
+| Safari  | 11.1+           |
+| Edge    | 79+             |
+
+PWA installation (Add to Home Screen / Install App) is supported in Chrome 70+, Edge 79+, and Safari 11.1+ on iOS. Firefox on desktop supports the game in-browser but does not currently support PWA installation via a built-in prompt.

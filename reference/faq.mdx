@@ -1,0 +1,59 @@
+---
+title: "Frequently Asked Questions — Terminal 1d6 RPG"
+sidebarTitle: "FAQ"
+description: "Answers to the most common questions about playing Terminal 1d6 RPG, including save issues, TTS problems, PWA installation, and how to recover a lost run."
+---
+
+This page answers the most common questions players have about Terminal 1d6 RPG. If you run into something not covered here, check the other reference pages or the installation guide for deeper detail on specific systems.
+
+<AccordionGroup>
+  <Accordion title="Do I need to create an account to play?">
+    No. Terminal 1d6 RPG runs entirely in your browser with no sign-up, no login, and no account required. Open the game, enter your character details, and start rolling — nothing else is needed.
+  </Accordion>
+
+  <Accordion title="Can I play offline?">
+    Yes. Install the game as a PWA (see the Installation guide) and it works completely offline. Even in-browser play requires no server connection after the first load — all game logic, tables, and narrative generation run locally on your device.
+  </Accordion>
+
+  <Accordion title="My save disappeared — what happened?">
+    Saves are stored in your browser's `localStorage`. They are automatically cleared if you:
+
+    - Play in a **private or incognito window** (localStorage is wiped when the window closes)
+    - **Clear browser site data** or history
+    - Switch to a **different browser or device**
+
+    Always use **Export JSON** to download a backup of your save before clearing browser data or switching environments.
+  </Accordion>
+
+  <Accordion title="Can I transfer my save to another device?">
+    Not directly via the save system. Use **Export JSON** to download your save file and keep an archival copy. There is currently no import function — exported files preserve your chronicle for reading and record-keeping, but you cannot load them back into a new browser session.
+  </Accordion>
+
+  <Accordion title="The TTS voice sounds robotic or cuts off — how do I fix it?">
+    TTS quality depends on the voice packs installed on your operating system, not on the game itself. A few things to try:
+
+    - **Switch browsers** — Chrome and Edge on Windows and macOS tend to produce the best TTS voices.
+    - **Toggle TTS off and back on** — this restarts the speech queue and can resolve cut-off or stalled audio.
+    - **Check your OS voice settings** — installing additional language or voice packs through your OS can significantly improve quality.
+  </Accordion>
+
+  <Accordion title="Can I heal or restore HP?">
+    No. HP only ever decreases — you lose 1 HP on a roll of 1, and there is no healing mechanic anywhere in the game. Survival is purely a matter of luck and how long the die continues to favor you. See the [Dice Outcomes](/reference/dice-outcomes) page for the full breakdown.
+  </Accordion>
+
+  <Accordion title="What happens when I run out of enemies, locations, or loot?">
+    When any pool is exhausted, the engine returns the message **"The void stares back; the pool is dry."** The game continues as normal — you just won't receive a new name or location drawn from that empty pool. Your rolls, HP changes, and narrative events still fire correctly.
+  </Accordion>
+
+  <Accordion title="Can I edit my character after creation?">
+    Not through the UI. Once a campaign is underway, your character details are locked. To start over with a different character, click **Reset** — but be aware that this erases your current campaign entirely. Export your story first if you want to keep a record of your run.
+  </Accordion>
+
+  <Accordion title="Is there a win condition?">
+    No. Terminal 1d6 RPG is a survival story — you play until you die (HP reaches 0) or choose to reset. There is no final boss, no victory screen, and no endpoint to reach. The longer you survive, the richer and longer your chronicle becomes.
+  </Accordion>
+
+  <Accordion title="Can I play on mobile?">
+    Yes. The game is fully responsive and works on any smartphone browser. For the best experience, install it as a PWA from **Chrome on Android** or **Safari on iPhone/iPad** — this gives you an app icon, full-screen play, and offline support. See the Installation guide for step-by-step instructions.
+  </Accordion>
+</AccordionGroup>

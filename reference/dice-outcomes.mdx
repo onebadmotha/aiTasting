@@ -1,0 +1,83 @@
+---
+title: "1d6 Outcome Reference: All Six Dice Results Explained"
+sidebarTitle: "Dice Outcomes"
+description: "Complete reference for all six 1d6 outcomes in Terminal 1d6 RPG — from Perfect Triumph to Critical Calamity — with their effects on HP, loot, and narrative."
+---
+
+This page lists every possible 1d6 result and exactly what happens when you roll it. Every action in Terminal 1d6 RPG resolves against this single table — whether you are exploring a dungeon, confronting a boss, or simply pressing forward into the unknown.
+
+<AccordionGroup>
+  <Accordion title="Roll 6 — ★ Perfect Triumph" icon="star" iconType="solid" color="#16a34a">
+    The die lands on its best face. A `good_things` event fires from the narrative event pool, weaving a fortunate turn into your story log. A loot item is drawn from the treasure pool and added to your chronicle. An encounter shift **always** occurs — you are transported to a new location and face a new enemy drawn from the appropriate pool. You lose **no HP**.
+
+    **Summary of effects:**
+    - `good_things` narrative event fires
+    - Loot item drawn from pool
+    - Encounter shift: **guaranteed**
+    - HP change: **none**
+  </Accordion>
+
+  <Accordion title="Roll 5 — ▲ Positive Progress" icon="triangle-exclamation" iconType="solid" color="#2563eb">
+    Clean execution. Your action succeeds without complication. No HP is lost, and no negative narrative event fires. An encounter shift is **possible** — the engine rolls a secondary d6, and if that result is **4 or higher**, an encounter shift triggers and you move to a new location facing a new enemy. If the secondary roll lands below 4, your current encounter continues.
+
+    **Summary of effects:**
+    - No narrative event
+    - No loot draw
+    - Encounter shift: **possible** (secondary d6 ≥ 4)
+    - HP change: **none**
+  </Accordion>
+
+  <Accordion title="Roll 4 — ▲ Positive Progress" icon="triangle-exclamation" iconType="solid" color="#2563eb">
+    Identical in effect to a roll of 5. Your action succeeds cleanly. No HP is lost, and no negative event fires. The secondary d6 encounter-shift check applies: a result of **4 or higher** on that follow-up roll triggers an encounter shift; a result below 4 keeps you in your current encounter.
+
+    **Summary of effects:**
+    - No narrative event
+    - No loot draw
+    - Encounter shift: **possible** (secondary d6 ≥ 4)
+    - HP change: **none**
+  </Accordion>
+
+  <Accordion title="Roll 3 — ▼ Complication & Strain" icon="chevron-down" iconType="solid" color="#ea580c">
+    Something goes wrong, but not fatally so. A narrative setback is written into your story log — a stumble, a miscalculation, a moment where fate slips through your fingers. You lose **no HP**, but the complication lingers in the chronicle. No encounter shift occurs; you remain in your current location, facing the same adversary.
+
+    **Summary of effects:**
+    - Narrative setback logged
+    - No loot draw
+    - Encounter shift: **never**
+    - HP change: **none**
+  </Accordion>
+
+  <Accordion title="Roll 2 — ▼ Complication & Strain" icon="chevron-down" iconType="solid" color="#ea580c">
+    Identical in effect to a roll of 3. A narrative setback fires and is recorded in your story log. You lose **no HP**, but the complication is woven into your chronicle as a moment of failure or misfortune. No encounter shift occurs.
+
+    **Summary of effects:**
+    - Narrative setback logged
+    - No loot draw
+    - Encounter shift: **never**
+    - HP change: **none**
+  </Accordion>
+
+  <Accordion title="Roll 1 — ✖ Dire Misfortune / ☠ Critical Calamity" icon="skull" iconType="solid" color="#dc2626">
+    The worst possible outcome. A `bad_things` event fires from the narrative event pool, and you lose **1 HP**. If your HP was already at 1, it now reaches 0 — your campaign ends immediately. An epilogue is generated and appended to your chronicle, and the run is closed. There is no recovery from 0 HP.
+
+    **Summary of effects:**
+    - `bad_things` narrative event fires
+    - No loot draw
+    - Encounter shift: **never**
+    - HP change: **−1 HP**
+    - If HP reaches 0: death, epilogue generated, campaign ends
+  </Accordion>
+</AccordionGroup>
+
+## Quick-Reference Summary Table
+
+| Roll | Name | HP Change | Loot Draw | Encounter Shift |
+|------|------|-----------|-----------|-----------------|
+| 6 | Perfect Triumph | None | Yes (bonus) | Always |
+| 5–4 | Positive Progress | None | No | Possible (d6 ≥ 4) |
+| 3–2 | Complication & Strain | None | No | Never |
+| 1 | Dire Misfortune | −1 HP | No | Never |
+
+<Warning>
+When your HP reaches 0 on a roll of 1, the game ends immediately. There is no recovery — no healing item, no second chance, and no way to reverse the result. Export your chronicle before it happens if you want to preserve your story.
+</Warning>

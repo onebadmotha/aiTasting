@@ -1,0 +1,73 @@
+---
+title: "How the 1d6 Resolution System Works"
+sidebarTitle: "Dice Resolution"
+description: "Every action in Terminal 1d6 RPG is resolved by a single d6 roll. Learn what each result means and how outcomes affect your HP, loot, and encounters."
+---
+
+Every time you type an action and press Enter, the game rolls a virtual six-sided die. That single number — nothing else — determines what happens next. There are no modifiers, no skill bonuses, and no hidden stats nudging the result in your favor. The d6 is the final word on every action you take, from charging a lich to whispering in a darkened corridor.
+
+## Outcome Table
+
+| Roll | Result | Effect |
+|------|--------|--------|
+| 6 | ★ Perfect Triumph | You overcome the challenge brilliantly. A good event fires and you also find a bonus loot item. |
+| 5 | ▲ Positive Progress | You execute your action cleanly. You advance without injury. |
+| 4 | ▲ Positive Progress | You execute your action cleanly. You advance without injury. |
+| 3 | ▼ Complication & Strain | You barely hold your ground. The surroundings shift against you. |
+| 2 | ▼ Complication & Strain | You barely hold your ground. The surroundings shift against you. |
+| 1 | ✖ Dire Misfortune | You lose 1 HP. A calamity event fires. If your HP reaches 0, your hero dies. |
+
+## Encounter Shifts
+
+Rolls of **4 or higher** can trigger an Encounter Shift — a secondary internal d6 roll that determines whether your current encounter advances. On a roll of **4 or 5**, the internal die must land 4 or above for a shift to occur. On a **6 (Perfect Triumph)**, an encounter shift always happens with no secondary roll needed. When a shift fires, you move to a new location and face a new enemy. See [Encounter Shifts](/gameplay/encounters) for the full details.
+
+## HP and Death
+
+You begin every campaign with **10 HP**. Only a roll of **1** costs you health — every Dire Misfortune outcome deducts exactly 1 HP. Rolls of 2 through 6 never directly reduce your HP. When your HP reaches **0**, the campaign ends: the game generates a death epilogue narrating the final moments of your hero, and you are given the option to export your story or start a new campaign.
+
+## Example Terminal Output
+
+The following examples show how each outcome category appears in the terminal:
+
+```
+> Strike the Shadow-Bound Rogue with my twin daggers
+
+[ROLL: 6 — ★ PERFECT TRIUMPH]
+You blur through the shadows faster than thought, driving both blades into the 
+rogue's exposed flank. He crumples with a strangled gasp. The darkness parts, 
+and something glints at your feet.
+You found: [Voidglass Pendant of the Forsaken].
+
+---
+
+> Dodge behind a collapsed pillar
+
+[ROLL: 5 — ▲ POSITIVE PROGRESS]
+You roll low, the rogue's blade singing past your ear. The pillar holds firm 
+behind you — a moment's breath, a better angle. You are unharmed.
+
+---
+
+> Attempt to pick the iron lock on the vault door
+
+[ROLL: 3 — ▼ COMPLICATION & STRAIN]
+Your pick catches and snaps. The tumblers grind, then seize. Somewhere deeper 
+in the crypt, something stirs — drawn by the noise you made.
+
+---
+
+> Charge the lich head-on
+
+[ROLL: 1 — ✖ DIRE MISFORTUNE]
+You lunge forward — and the lich simply steps aside, dragging one cold finger 
+across your ribs. Pain lances through you.
+Vitality: 9 / 10 HP
+```
+
+<Warning>
+  A roll of 1 always costs you 1 HP regardless of what action you took. It does not matter how cautious, clever, or defensive your input was — the die is absolute. Plan accordingly.
+</Warning>
+
+<Tip>
+  There is no way to "optimize" the roll. Every single action — attack, dodge, or dialogue — has an equal one-in-six chance of any result. Rather than hunting for a mechanically safe move, choose the action that makes for the best story. The die will do what it does.
+</Tip>

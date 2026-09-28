@@ -1,47 +1,123 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Get Started with Terminal 1d6 RPG in Minutes"
+sidebarTitle: "Quick Start"
+description: "Create your first character and play your first turn in Terminal 1d6 RPG. This guide walks you through the entire onboarding flow step by step."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+This guide walks you through everything that happens from the moment you open Terminal 1d6 RPG to the moment you roll your first die. By the end you will have a named character standing in a procedurally generated dungeon location, ready to take on the henchman blocking your path. The whole process takes under five minutes and requires nothing but a browser.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+<Note>
+  Your session is auto-saved after every action using your browser's
+  localStorage. You can close the tab at any point and return to exactly where
+  you left off — no manual saving needed.
+</Note>
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Open the Game in Your Browser">
+    Navigate to the Terminal 1d6 RPG URL in any modern browser. The game runs
+    entirely client-side, so there is nothing to install before you can play.
 
-    ```bash
-    npm install your-package
-    ```
+    Supported browsers include:
+
+    - **Chrome** (desktop and Android)
+    - **Firefox** (desktop)
+    - **Safari** (desktop, iPhone, and iPad)
+    - **Edge** (desktop)
+
+    The terminal interface loads immediately. You will see the game title and a
+    prompt waiting for you to begin.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
-    ```
+  <Step title="Start the Character Creation Wizard">
+    Type anything or press **Enter** at the opening prompt to launch the
+    9-step character creation wizard. The Dungeon Master asks you one question
+    at a time directly in the terminal. Type your answer and press **Enter** (or
+    tap **SEND** on mobile) to move to the next question.
+
+    The nine questions, in order, are:
+
+    | # | What the DM Asks | Example Answer |
+    |---|-----------------|----------------|
+    | 1 | **Your name** | `Sable Vorne` |
+    | 2 | **Your class** | `Rogue`, `Chrono-Mage`, `Oathbreaker Paladin` |
+    | 3 | **Your timeline or era** | `The Age of Ashen Rust`, `Post-Collapse Year 442` |
+    | 4 | **Your familiar or companion** | `A one-eyed raven named Dusk` or `None` |
+    | 5 | **Your character bio** | A sentence or two about your background and motivation |
+    | 6 | **Your weapons and tools** | `A serrated short sword, lock picks, a smoke canister` |
+    | 7 | **Your first strength** | `Shadow movement — you are almost invisible in dim light` |
+    | 8 | **Your second strength** | `Quick hands — you can pick a lock in under ten seconds` |
+    | 9 | **Your struggles or weaknesses** | `Overconfident in open combat; allergic to arcane residue` |
+
+    After the ninth answer you can add any extra notes for the Dungeon Master —
+    special lore, preferred playstyle, or anything else that should colour the
+    narration. Press **Enter** on a blank line to skip this step and proceed.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Enter the Dungeon">
+    Once character creation is complete, the Dungeon Master places you inside
+    your first procedurally drawn location. The terminal prints a scene
+    description that tells you:
+
+    - **Where you are** — drawn from a pool of 25 unique locations (e.g., a
+      collapsed aqueduct, a phosphorescent fungal cavern, a rusted clock tower
+      basement)
+    - **Who you face** — a henchman enemy drawn from a pool of 25 (e.g., a
+      Plague-Masked Enforcer, a Rusted Automaton, a Whisper-Cult Initiate)
+    - **What loot is present** — a single item drawn from a pool of 25 (e.g.,
+      a Vial of Echo Dust, a Cracked Compass That Points to Regret)
+
+    Read the scene carefully — the environment and enemy description often
+    suggest actions that will lead to better roll outcomes.
+  </Step>
+
+  <Step title="Take Your First Action">
+    Type a free-form action in the input field at the bottom of the terminal and
+    press **Enter** or click **SEND**. You are not limited to a menu of
+    options — write whatever your character would actually attempt.
+
+    <Tip>
+      Not sure what to type for your first action? Try one of these openers:
+
+      - `Attack the henchman with my [weapon]`
+      - `Sneak into the shadows and observe before striking`
+      - `Cast a spell to disorient the enemy`
+      - `Look for an environmental advantage in the room`
+      - `Attempt to intimidate the henchman into backing down`
+
+      Descriptive, in-character actions give the Dungeon Master more material
+      to work with and often lead to richer narration regardless of the roll.
+    </Tip>
+  </Step>
+
+  <Step title="See the Dice Roll Result">
+    After you submit your action, the game rolls a virtual d6 and displays the
+    result directly in the terminal. The outcome is color-coded so you can read
+    it at a glance:
+
+    | Roll | Outcome           | Terminal Color  |
+    | ---- | ----------------- | --------------- |
+    | 6    | Perfect Triumph   | Bright green    |
+    | 5    | Strong Success    | Green           |
+    | 4    | Partial Success   | Yellow-green    |
+    | 3    | Mixed Outcome     | Yellow          |
+    | 2    | Setback           | Orange          |
+    | 1    | Critical Calamity | Red — and –1 HP |
+
+    Below the roll result, the Dungeon Master narrates exactly what happens to
+    your character based on the number that landed. Your current HP is always
+    visible in the terminal header so you can track your survival at a glance.
+
+    You are now playing. Type your next action to continue the adventure.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## Keep Playing
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+After your first roll the loop is the same: read the narration, decide what your character does next, type it, roll, repeat. Work through the dungeon, defeat the henchman, find the boss, survive. If you reach 0 HP your run ends — but your chronicle is saved and you can export it as Markdown before starting a new character.
+
+When you are ready to go deeper, explore the guides below:
+
+- **[Dice Resolution](/gameplay/dice-resolution)** — understand every outcome and how the DM interprets the roll
+- **[Character Creation](/gameplay/character-creation)** — tips for building a character that makes for great narration
+- **[Exporting Your Story](/features/export)** — back up your save or download your adventure as a readable chronicle
+- **[Install Offline](/installation)** — add the game to your home screen and play without Wi-Fi

@@ -1,0 +1,52 @@
+---
+title: "Auto-Save and Session Restore in Terminal 1d6 RPG"
+sidebarTitle: "Save & Load"
+description: "Terminal 1d6 RPG automatically saves your game to browser localStorage after every action. Reload the page anytime to resume exactly where you left off."
+---
+
+Terminal 1d6 RPG saves your progress automatically — you never need to open a menu or press a save button. Every action you take, every die you roll, and every piece of loot you claim is written to your browser's `localStorage` the moment it happens. Close the tab, shut the laptop, walk away — your adventure will be exactly where you left it the next time you return.
+
+## What Is Saved
+
+The following data is preserved in full after every single action:
+
+- **Full character sheet** — all 9 wizard fields (name, class, era, companion, and more)
+- **Current HP and max HP** — your exact health at the moment you left
+- **Complete action log** — the entire terminal scroll history, every line of DM output and your commands
+- **Remaining pool entries** — the current state of all six procedural tables, so draws continue from where they stopped
+- **Combat state** — whether you are currently in a fight and the identity of your current enemy
+- **TTS setting** — whether narration was enabled or disabled
+- **Game over state** — whether your run has concluded
+
+## How Session Restore Works
+
+When you open the game and a saved session is found in `localStorage`, the full action log is replayed into the terminal to reconstruct your screen exactly as you left it. Once the replay completes, the following system message appears in the terminal:
+
+```
+[SYSTEM] Previous adventure session restored from local storage.
+```
+
+Your character sheet repopulates, your pool entries reload, and combat resumes if you were mid-fight. You can continue playing immediately.
+
+The save data is stored under the localStorage key `terminal_1d6_rpg_state`.
+
+<Warning>
+  Saves are stored in the browser on the device you're playing on. Clearing your browser data or playing in a private or incognito window will erase your save permanently.
+</Warning>
+
+<Note>
+  Save data is never sent to any server — it lives entirely on your device.
+</Note>
+
+## Resetting Your Campaign
+
+If you want to start fresh, click the **Reset** button in the top-right corner of the toolbar (marked in red). The game will prompt you to confirm before taking any action. Once you confirm:
+
+1. Your `localStorage` save is cleared completely.
+2. The page reloads and launches a brand-new campaign from the character creation wizard.
+
+This action is permanent and cannot be undone.
+
+<Tip>
+  Before resetting, use **Export JSON** or **Export Story** to preserve a record of your adventure. See the [Export](/features/export) page for details.
+</Tip>
