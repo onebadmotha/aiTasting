@@ -1,5 +1,5 @@
 ---
-title: "Auto-Save and Session Restore in Terminal 1d6 RPG"
+title: "Auto-Save and Session Restore in Terminal 1d6 RPG Game"
 sidebarTitle: "Save & Load"
 description: "Terminal 1d6 RPG automatically saves your game to browser localStorage after every action. Reload the page anytime to resume exactly where you left off."
 ---
@@ -8,27 +8,28 @@ Terminal 1d6 RPG saves your progress automatically — you never need to open a 
 
 ## What Is Saved
 
-The following data is preserved in full after every single action:
+All data is stored under the localStorage key `terminal_1d6_rpg_state`. The following fields are preserved in full after every single action:
 
-- **Full character sheet** — all 9 wizard fields (name, class, era, companion, and more)
-- **Current HP and max HP** — your exact health at the moment you left
-- **Complete action log** — the entire terminal scroll history, every line of DM output and your commands
-- **Remaining pool entries** — the current state of all six procedural tables, so draws continue from where they stopped
-- **Combat state** — whether you are currently in a fight and the identity of your current enemy
-- **TTS setting** — whether narration was enabled or disabled
-- **Game over state** — whether your run has concluded
+| Field | What it holds |
+|---|---|
+| `character` | All 9 wizard fields (name, class, timeline, familiar, bio, weapons, strengths, struggles, notes) plus current and max HP |
+| `logs` | Array of every terminal message — the entire scroll history, every line of DM output and your commands |
+| `tables` | Remaining pool entries for all six procedural tables, so draws continue from where they stopped |
+| `inCombat` | Boolean — whether you are currently in a fight |
+| `currentEnemy` | The name of the current enemy, if any |
+| `gameOver` | Boolean — whether your run has concluded |
+| `ttsEnabled` | Whether narration was enabled or disabled |
+| `wizardStep` | Which step of the character-creation wizard you had reached |
 
 ## How Session Restore Works
 
-When you open the game and a saved session is found in `localStorage`, the full action log is replayed into the terminal to reconstruct your screen exactly as you left it. Once the replay completes, the following system message appears in the terminal:
+When you open the game and a saved session is found in `terminal_1d6_rpg_state`, the full action log is replayed into the terminal to reconstruct your screen exactly as you left it. Once the replay completes, the following system message appears in the terminal:
 
 ```
 [SYSTEM] Previous adventure session restored from local storage.
 ```
 
 Your character sheet repopulates, your pool entries reload, and combat resumes if you were mid-fight. You can continue playing immediately.
-
-The save data is stored under the localStorage key `terminal_1d6_rpg_state`.
 
 <Warning>
   Saves are stored in the browser on the device you're playing on. Clearing your browser data or playing in a private or incognito window will erase your save permanently.
